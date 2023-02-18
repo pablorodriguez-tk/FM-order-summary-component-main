@@ -1,0 +1,227 @@
+:root {
+  --clr-primary: hsl(225, 100%, 94%);
+  --clr-secondary: hsl(245, 75%, 52%);
+
+  --crlr-secondary-hover: hsl(245, 75%, 72%);
+
+  --clr-neutral-900: hsl(225, 100%, 98%);
+  --clr-neutral-800: hsl(225, 100%, 96%);
+  --clr-neutral-400: hsl(224, 23%, 55%);
+  --clr-neutral-100: hsl(223, 47%, 23%);
+
+  --ff-base: "Red Hat Display", sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  --shadow: 0px 18px 10px 1px rgba(114, 128, 167, 0.23);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* General styling */
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+  color: var(--clr-neutral-400);
+
+  /* Background */
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--clr-primary);
+
+  /* For this proyect only */
+  display: grid;
+  place-content: center;
+  padding: 1.5rem;
+}
+
+/* Utilities */
+
+.flex-group-row {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  padding: 16px;
+}
+
+.filler {
+  flex: 1;
+}
+
+/* Order-Summary styles */
+.order-summary {
+  --content-padding: 1.5rem;
+  --content-spacing: 1rem;
+  --content-margin: 1rem;
+
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background-color: var(--clr-neutral-900);
+  margin: var(--content-margin * 2);
+  min-width: 330px;
+  max-width: 400px;
+}
+
+.order-summary__content {
+  padding: var(--content-padding);
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  justify-items: center;
+  row-gap: 1.25rem;
+}
+
+.order-summary__title {
+  font-weight: var(--fw-black);
+  color: var(--clr-neutral-100);
+}
+
+.order-summary__description {
+  text-align: center;
+}
+
+.order-summary__plan-type {
+  font-weight: var(--fw-black);
+  color: var(--clr-neutral-100);
+}
+
+.order-summary__plan-price {
+  font-size: 0.875rem;
+  font-weight: var(--fw-regular);
+}
+
+.order-summary__link {
+  text-decoration: underline;
+  color: var(--clr-secondary);
+  font-weight: var(--fw-black);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  justify-self: flex-end;
+}
+
+.order-summary__link:hover {
+  color: var(--crlr-secondary-hover);
+}
+
+.order-summary__container {
+  background-color: var(--clr-neutral-800);
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.primary-button {
+  width: 100%;
+  cursor: pointer;
+  border: 0;
+  padding: 1em;
+  font-size: 0.875rem;
+  color: var(--clr-primary);
+  background-color: var(--clr-secondary);
+  font-weight: var(--fw-black);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.primary-button:hover {
+  background-color: var(--crlr-secondary-hover);
+}
+
+.secondary-button {
+  cursor: pointer;
+  border: 0;
+  background-color: inherit;
+  font-size: 0.875rem;
+  color: var(--clr-neutral-400);
+  font-weight: var(--fw-black);
+}
+
+.secondary-button:hover {
+  color: var(--clr-neutral-100);
+}
+
+@media (min-width: 400px) {
+  .order-summary__content {
+    padding: calc(var(--content-padding) * 1.7);
+  }
+  .order-summary__container {
+    padding: var(--content-padding);
+  }
+  body {
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-size: cover;
+  }
+}
