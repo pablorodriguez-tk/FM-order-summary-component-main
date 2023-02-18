@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./FinalProduct/mobile.png.jpg)
+![](./FinalProduct/mobile.png)
 
 ### Links
 
