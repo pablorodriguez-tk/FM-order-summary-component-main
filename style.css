@@ -132,13 +132,11 @@ body {
   overflow: hidden;
   border-radius: 1.25rem;
   background-color: white;
-  margin: var(--content-margin * 2);
   min-width: 330px;
   max-width: 400px;
 }
 
 .order-summary__content {
-  padding: var(--content-padding);
   display: grid;
   grid-template-columns: 1fr;
   place-content: center;
@@ -171,7 +169,6 @@ body {
   font-weight: var(--fw-black);
   font-size: 0.8125rem;
   cursor: pointer;
-  justify-self: flex-end;
 }
 
 .order-summary__link:hover {
