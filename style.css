@@ -15,7 +15,7 @@
   --fw-bold: 700;
   --fw-black: 900;
 
-  --shadow: 0px 18px 10px 1px rgba(114, 128, 167, 0.23);
+  --shadow: 0px 10px 40px 0px hsla(245, 75%, 52%, 0.5);
 }
 
 /*
@@ -98,13 +98,14 @@ body {
   /* Background */
   background-image: url("./images/pattern-background-mobile.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: top;
   background-color: var(--clr-primary);
 
   /* For this proyect only */
   display: grid;
   place-content: center;
+  min-height: 100vh;
   padding: 1.5rem;
 }
 
@@ -130,7 +131,7 @@ body {
 
   overflow: hidden;
   border-radius: 1.25rem;
-  background-color: var(--clr-neutral-900);
+  background-color: white;
   margin: var(--content-margin * 2);
   min-width: 330px;
   max-width: 400px;
@@ -222,6 +223,5 @@ body {
   }
   body {
     background-image: url("./images/pattern-background-desktop.svg");
-    background-size: cover;
   }
 }
